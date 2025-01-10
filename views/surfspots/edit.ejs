@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit surfspot</title>
+</head>
+
+<body>
+    <h1>Edit surfspot</h1>
+    <form action="/surfspots/<%=surfspot._id%>?_method=PUT" method="POST">
+        <div>
+            <label for="description">Description</label>
+            <input type="text" id="description" name="surfspot[description]" value="<%=surfspot.description %>">
+        </div>
+        <div>
+            <label for="location">Location</label>
+            <input type="text" id="location" name="surfspot[location]" value="<%= surfspot.location%>">
+        </div>
+        <button>Update Surf Spot</button>
+    </form>
+    <a href="/surfspots/<%= surfspot._id%>">Back To surfspot</a>
+
+</body>
+
+</html>
