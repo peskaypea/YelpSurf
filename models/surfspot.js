@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const SurfSpotSchema = new Schema({
     location: String,
     size: String,
+    image: String,
     description: String, 
     tide: String,
 });

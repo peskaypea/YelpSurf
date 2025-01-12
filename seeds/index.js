@@ -28,6 +28,7 @@ const seedDB = async () => {
 
         const spot = new SurfSpot({
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
+            image: `https://picsum.photos/400?random=${Math.random()}`,
             size: `${surfSize}ft`,
             tide: tide(),
             description: `The ${sample(descriptors)} ${sample(places)} is ${surfSize}ft and ${sample(descriptors)}`
