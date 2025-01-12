@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit surfspot</title>
-</head>
-
+<% layout('layouts/boilerplate') %>
 <body>
     <h1>Edit surfspot</h1>
     <form action="/surfspots/<%=surfspot._id%>?_method=PUT" method="POST">
@@ -23,5 +15,3 @@
     <a href="/surfspots/<%= surfspot._id%>">Back To surfspot</a>
 
 </body>
-
-</html>
