@@ -1,23 +1,22 @@
 <% layout('layouts/boilerplate') %>
 <body>
-    <h1>
-        <%= surfspot.description %>
-    </h1>
-    <h2>
-        <%= surfspot.location %>
-    </h2>
-    <img src="<%= surfspot.image %>" alt="">
-    <p>  <%= surfspot.size %> </p>
-    <p>  <%= surfspot.tide %> </p>
-    <p> <a href="/surfspots/<%=surfspot._id%>/edit">Edit</a>
+<div class="row" class="col-6 offset-3">
+<div class="card">
+    <img src="<%= surfspot.image %>" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= surfspot.location %></h5>
+      <p class="card-text"><%= surfspot.description %></p>
+      <p class="card-text"> 
+        <small class="text-muted"><%= surfspot.size %> </small>
+        <small class="text-muted"><%= surfspot.tide %> tide </small>
     </p>
-    <p>
-    <form action="/surfspots/<%=surfspot._id%>?_method=DELETE" method="POST">
-        <button>Delete</button>
-    </form>
-    </p>
-    <p> <a href="/surfspots/<%=surfspot._id%>/edit">Edit</a></p>
-    <footer>
-        <a href="/surfspots">All surfspots</a>
-    </footer>
+    <div class="card-body">
+        <a class="card-link btn btn-primary" href="/surfspots/<%=surfspot._id%>/edit"">Edit</a>
+        <form class="d-inline" action="/surfspots/<%=surfspot._id%>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Delete</button>
+        </form>
+    </div>
+    </div>
+  </div>
+</div>   
 </body>

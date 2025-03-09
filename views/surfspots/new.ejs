@@ -1,16 +1,36 @@
 <% layout('layouts/boilerplate') %>
 <body>
-    <form action="/surfspots" method="POST">
-        <div>
-            <label for="description">Description</label>
-            <input type="text" id="description" name="surfspot[description]">
+    <div class="row">
+        <h1 class="text-center">
+            New Surf Spot
+        </h1>
+        <div class="col-6 offset-3">
+            <form action="/surfspots" method="POST" novalidate>
+                <div class="mb-3">
+                    <label for="location">Location</label>
+                    <input class="form-control" type="text" id="location" name="surfspot[location]" required>
+                </div>
+                <div>
+                    <label for="image">Image Url</label>
+                    <input class="form-control" type="text" id="image" name="surfspot[image]" required>
+                </div>
+                <div class="mb-3">
+                    <label for="size">Size</label>
+                    <input class="form-control" type="text" id="size" name="surfspot[size]" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tide">Tide</label>
+                    <input class="form-control" type="text" id="tide" name="surfspot[tide]" required>
+                </div>
+                <div class="mb-3">
+                    <label for="description">Description</label>
+                    <input class="form-control" type="text" id="description" name="surfspot[description]" required>
+                </div>
+                <button class="btn btn-success">Add Surf Spot</button>
+            </form>
         </div>
-        <div>
-            <label for="location">Location</label>
-            <input type="text" id="location" name="surfspot[location]">
-        </div>
-        <button>Add Surf Spot</button>
-    </form>
-    <a href="/surfspots">All Surf Spots</a>
+        <a href="/surfspots">All Surf Spots</a>
+    </div>
+
 
 </body>
